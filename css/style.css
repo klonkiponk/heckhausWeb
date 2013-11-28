@@ -121,6 +121,8 @@ h4 {
 .smallItem img {
   width: 213px;
   height: 136px; }
+.smallItem h2 {
+  margin-top: 7px; }
 
 section.abstract {
   margin-bottom: 25px; }
@@ -657,11 +659,15 @@ p {
 
 #debug {
   position: fixed;
-  top: 10px;
+  top: 150px;
   left: 10px;
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px dashed gray;
+  background: rgba(255, 0, 0, 0.3);
+  border: 1px dashed orange;
+  z-index: 1000;
   display: none; }
+#debug pre {
+  background: none;
+  border: none; }
 
 #wrapper {
   overflow-x: hidden;

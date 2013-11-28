@@ -56,6 +56,8 @@ h4 {
 .smallItem img {
   width: 213px;
   height: 136px; }
+.smallItem h2 {
+  margin-top: 7px; }
 
 section.abstract {
   margin-bottom: 25px; }
