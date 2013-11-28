@@ -1,0 +1,222 @@
+.blog-wrap {
+    padding: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: #333;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.blog-wrap .entry {
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 10px;
+	margin-bottom: 50px;
+}
+
+.blog-title {
+	color: #333;
+	font-size: 30px;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	line-height: 1;
+}
+
+.blog-title a {
+	color: #333;
+	text-decoration: none;
+}
+
+.blog-content {
+	clear: both;
+}
+
+.num_comments {
+	width: 100%;
+	padding-bottom: 20px;
+	clear: both;
+}
+
+.num_comments a {
+	text-decoration: none;
+}
+
+.comment-line {
+    margin-bottom: 10px;
+    float: left;
+    border-bottom-color: #ddd;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    width: 100%;
+}
+
+.comment-date {
+    color: #999;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 10px;
+    float: left;
+}
+
+.comment-name {
+    width: auto;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 0px;
+    float: left;
+    font-weight: bold;
+}
+
+.blog-comment {
+	padding-bottom: 60px;
+}
+
+.comment-form {
+    width: 100%;
+    margin-top: 25px;
+    clear: both;
+    margin-bottom: 50px;
+}
+
+textarea {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	border-width: 1px;
+	border-color: #cccccc;
+    border-style: solid;
+    line-height: normal;
+    color: #333;
+    height: 125px;
+    padding: 2px;
+    border-radius: 1px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+    width:500px;
+    max-width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+input[type="text"] {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	border-width: 1px;
+	border-color: #cccccc;
+    border-style: solid;
+    line-height: normal;
+    color: #333;
+    height: 30px;
+    padding: 2px;
+    border-radius: 1px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset;
+    width:500px;
+    max-width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.comments {
+    padding-top: 50px;
+    clear: both;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.comments-off {
+	background-color: #F4F2EB;
+	border: 1px solid #ddd;
+	padding: 5px 10px;
+	border-radius: 4px;
+	display: inline;
+}
+
+.blog-pagination {
+    width: 250px;
+    margin: 0px;
+    clear: both;
+    float: left;
+    padding-left: 0px;
+    padding-bottom: 30px;
+    padding-right: 0px;
+    padding-top: 30px;
+}
+
+.blog-pagination a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #999;
+    font-size: 12px;
+    padding: 7px;
+    margin: 0px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.add {
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+.comment-label {
+	color: #555;
+}
+
+.btn {
+  text-decoration: none;
+  color: #444;
+  border-radius: 2px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 1px solid #ccc;
+  padding: .5em 1.05em;
+  font-weight: 500;
+  font-size: .85em;
+  background: #f3f2f2;
+  background: -moz-linear-gradient(top, #ffffff 0%, #f3f2f2 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #f3f2f2));
+  background: -webkit-linear-gradient(top, #ffffff 0%, #f3f2f2 100%);
+  background: -o-linear-gradient(top, #ffffff 0%, #f3f2f2 100%);
+  background: -ms-linear-gradient(top, #ffffff 0%, #f3f2f2 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #f3f2f2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f3f2f2', GradientType=0);
+}
+.btn:hover {
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+
+.share-buttons {
+	margin-top: 20px;
+	float: left;
+}
+
+#ph {
+	display: none;
+	visibility: hidden;
+}
+
+.blog-date {
+	color: #aaa;
+	padding: 10px 0px;
+}
+
+.searchword {
+	font-weight: bold;
+}
+
+input#searchword {
+	width: 350px;
+}
+
+form#search {
+	clear: both;
+}
+
+.search-content {
+	padding-bottom: 20px;
+}
+
+.search-icon {
+	float: right;
+}

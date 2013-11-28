@@ -1,0 +1,3 @@
+1|slider|slider1.jpeg||1
+2|slider|slider2.jpeg||2
+3|slider|slider3.jpeg||3

@@ -1,0 +1,1 @@
+<?php include('../../../../plugins/timthumb/tim_thumb.php'); ?>

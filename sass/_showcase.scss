@@ -1,0 +1,17 @@
+.showcase {
+	&.big {
+		.col-md-5,.col-md-7 {
+			padding:0;
+		}
+		h2 {
+			font-size: 18px;
+			margin-top: 0;
+			small {
+				
+			}
+		}
+		img {
+			float:left;
+		}
+	}
+}

@@ -1,0 +1,27 @@
+h1,h2,h3,h4,h5,h6 {
+	font-family: "DIN";
+	text-transform: uppercase;
+}
+
+.page-header {
+	border-bottom: none;
+	margin-bottom: 0;
+	h1 {
+		color:$heckhausgray;
+		font-size: 16px;
+
+	}
+	small {
+		color:$heckhausred;
+		font-size: 16px;
+	}
+}
+
+
+h4 {
+	display:inline-block;
+	font-size: 14px;
+	text-transform: none;
+	margin-bottom:5px;
+	margin-top:5px;
+}

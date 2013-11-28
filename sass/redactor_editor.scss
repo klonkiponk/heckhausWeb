@@ -1,0 +1,28 @@
+@import "compass";
+@import "font-awesome.min.css";
+@import "bootstrap.min.css";
+$heckhausgray: #999;
+$heckhausred:red;
+@import "fonts";
+
+//@import "navbar";
+
+@import "headings";
+
+@import "content";
+@import "showcase";
+@import "footer";
+@media (min-width: 1200px) {
+	.container {
+		max-width: 970px;
+	}
+}
+
+body {
+	padding-top:0;
+	font-family: "Arial";
+	width:98%;
+}
+.toggled {
+	display:block;
+}

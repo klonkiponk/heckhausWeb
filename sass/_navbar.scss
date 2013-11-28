@@ -1,0 +1,91 @@
+//DUE to having a fixed navbar a body padding has to be inserted
+body {
+	//padding-top: 120px; //70 px for the standard height of a fixed navbar in bootstrap + 45 cause of the extra padding
+}
+
+.navbar-nav {
+	margin-left: 0;
+}
+
+
+
+.navbar {
+	font-family:"DIN";
+	//background:orange;
+	.container {
+		padding-top: 45px;
+		padding-left: 0;
+		padding-right: 0;
+		background: #fff;
+	}
+	img {
+		width:200px;
+		height:23px;
+	}
+	a {
+		text-transform: uppercase;
+	}
+	a.dropdown-toggle {
+		color:red;
+		font-size:225%;
+		small {
+			color:$heckhausgray;
+			font-size: 50%;
+		}
+		&:hover {
+			background:#fff;
+		}
+	}
+	.nav>li {
+		float:left;
+	}
+	li>a:focus,
+	li>a:hover {
+		background: $heckhausred;
+	}
+	li.dropdown {
+		.dropdown-menu {
+			display: block;
+			visibility: hidden;
+			opacity: 0;
+			//@include transition(0.5s all);
+			border:0;
+			background:#fff;
+			@include box-shadow(none);
+			@include box-shadow(1px 1px 4px #999);					
+		}
+		&:hover {
+			.dropdown-menu {
+				display: block;
+				opacity: 1.0;
+				visibility: visible;
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	.navbar-nav {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.navbar-header {
+		display:block;
+		float:none !important;
+		margin:0 auto !important;
+		margin-left: 50px !important;
+	}
+	.navbar {
+		min-height:0;
+		margin-bottom: 0;
+		.container {
+			padding-top: 0;
+			padding-left: 0;
+			padding-right: 0;
+			background: #fff;
+		}
+	}
+	body {
+		padding-top: 80px; //70 px for the standard height of a fixed navbar in bootstrap + 45 cause of the extra padding
+	}	
+}
