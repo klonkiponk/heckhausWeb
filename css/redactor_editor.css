@@ -32,22 +32,41 @@ h4 {
   margin-bottom: 5px;
   margin-top: 5px; }
 
+.red {
+  color: red; }
+
+ul {
+  list-style: square;
+  padding: 0; }
+
+#workNews iframe {
+  margin: 0; }
+
+.noPadding {
+  padding: 0; }
+
+p {
+  margin: 10px 0; }
+
 .toggled {
   display: none; }
 
-.toggler {
+.toggler, .newsletterToggler {
   color: red;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase; }
-.toggler .more {
+.toggler .more, .newsletterToggler .more {
   font-size: 80%; }
-.toggler .more:after {
+.toggler .more:after, .newsletterToggler .more:after {
   content: "more"; }
-.toggler .less {
+.toggler .less, .newsletterToggler .less {
   font-size: 80%; }
-.toggler .less:after {
+.toggler .less:after, .newsletterToggler .less:after {
   content: "less"; }
+
+article.container {
+  margin-bottom: 25px; }
 
 .medTxt h2 {
   font-size: 18px;
@@ -93,15 +112,16 @@ div.caption h2 {
   font-size: 18px; }
 
 a {
-  color: red; }
+  color: #333; }
 a:hover {
-  color: red; }
+  color: red;
+  text-decoration: none; }
 
 iframe {
   display: block;
   margin: 25px auto; }
 
-#caption1, #caption2, #caption3, #caption4 {
+#caption1, #caption2, #caption3, #caption4, #caption5, #caption6, #caption6, #caption7, #caption8 {
   display: none; }
 
 .divider {
@@ -122,6 +142,40 @@ div.job {
 
 #forYouReferences ul {
   list-style: none; }
+
+#weProfile h1 {
+  font-size: 400%;
+  margin-bottom: 30px; }
+#weProfile ul {
+  list-style: none; }
+#weProfile ul li {
+  background: red;
+  color: #fff;
+  margin-bottom: 7px;
+  padding: 3px; }
+
+#newsletter form {
+  margin: 0 auto;
+  width: 460px;
+  padding-top: 15px; }
+#newsletter .input-group {
+  margin-bottom: 4px; }
+#newsletter .input-group-addon {
+  text-align: left; }
+#newsletter .inputs .input-group-addon {
+  text-align: left;
+  width: 110px; }
+#newsletter .inputs input {
+  width: 320px; }
+#newsletter .form-control:focus {
+  border-color: red;
+  outline: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+
+#forYouReferences a:hover {
+  color: red; }
 
 .showcase.big .col-md-5, .showcase.big .col-md-7 {
   padding: 0; }

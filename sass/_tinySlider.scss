@@ -1,0 +1,83 @@
+.tinySlider {
+	height: 1%;
+	overflow:hidden;
+	padding: 0;
+	position: relative;
+}
+.tinySlider .viewport {
+	float: left;
+	width: 940px;
+	height: 460px;
+	overflow: hidden;
+	position: relative;
+}
+.tinySlider .buttons {
+	background:url("../img/arrows.png") no-repeat scroll 0 0 transparent;
+	display: block;
+	margin: 0;
+	width: 90px;
+	height: 75px;
+	overflow: hidden;
+	position: absolute;
+	z-index:100;
+	text-indent: -9999em;
+	left:44%;
+	opacity:0;
+	transition:opacity 0.5s;
+}
+.tinySlider .buttons:hover {
+	opacity:1;
+}
+
+.tinySlider .prev {
+//	background:green;	
+	top:0;
+}
+
+.tinySlider .next {
+	bottom:0;
+//	background:fuchsia;
+	background-position: 0 -75px;
+}
+.tinySlider .disable {
+	visibility: hidden;
+}
+.tinySlider .overview {
+	list-style: none;
+	position: absolute;
+	padding: 0;
+	margin: 0;
+	width: 240px;
+	left: 0;
+	top: 0;
+}
+.tinySlider .overview li{
+	float: left;
+	margin: 0 20px 0 0;
+	padding: 0;
+	height: 460px;
+	border: 0;
+	width: 940px;
+	position: relative;
+	overflow: hidden;
+	img {
+		height: 460px;
+		width: 940px;		
+	}
+}
+.tinySlider .overview li .caption {
+	position: absolute;
+	z-index: 2000;
+	bottom:-4px;
+	background:#fff;
+	left:0;
+	width:100%;
+	opacity:1;
+	padding:5px;
+	padding-left: 0;
+	padding-bottom: 0;
+	//background: aqua;
+	h2 {
+		margin:0;
+	}
+}

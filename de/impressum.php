@@ -7,7 +7,7 @@
 <div class="container">
 
 <article>
-	<?php include("../admin/data/blocks/de/Impressum.html"); ?>	
+	<?php include("../admin/data/blocks/de/impressum.html"); ?>
 </article>
 	<?php include("../php/inc.footer.php") ;?>
 </div>

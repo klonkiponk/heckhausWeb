@@ -7,9 +7,9 @@
 <div class="container">
 
 <article>
-	<?php include("../admin/data/blocks/de/Agb.html"); ?>	
+	<?php include("../admin/data/blocks/de/agb.html"); ?>
 </article>
-	<?php include("../php/inc.footer.php") ;?>
+	<?php //include("../php/inc.footer.php") ;?>
 </div>
 </div>
 <?php include("../php/inc.scripts.php");?>

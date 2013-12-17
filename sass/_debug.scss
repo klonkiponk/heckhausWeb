@@ -1,0 +1,13 @@
+#debug {
+	position: fixed;
+	top:150px;
+	left:10px;
+	background:rgba(255,0,0,0.3);
+	border:1px dashed orange;
+	z-index: 1000;
+	display:none;
+	pre {
+		background:none;
+		border:none;
+	}
+}

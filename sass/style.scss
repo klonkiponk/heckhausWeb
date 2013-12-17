@@ -3,69 +3,19 @@
 $heckhausgray: #999;
 $heckhausred:red;
 @import "fonts";
-
 @import "navbar";
-
 @import "headings";
-
 @import "content";
 @import "showcase";
 @import "jumbotron";
 @import "footer";
-@import "mediaQueries";
 
 @import "lightBox";
+@import "nivoSlider";
+@import "debug";
+@import "layout";
+@import "tinySlider";
 
-ul {
-	list-style:square;
-	padding:0;
-}
 
-.active {
-	background:aqua;
-}
 
-p {
-	margin: 10px 0;
-}
-
-#debug {
-	position: fixed;
-	top:150px;
-	left:10px;
-	background:rgba(255,0,0,0.3);
-	border:1px dashed orange;
-	z-index: 1000;
-	display:none;
-	pre {
-		background:none;
-		border:none;
-	}
-}
-#wrapper {
-	overflow-x: hidden;
-	overflow-y: scroll;
-	position:fixed;
-	top:120px;
-	padding-bottom:120px;
-}
-
-#contentLeft {
-	float: left;
-	width:970px;
-}
-#contentRight {
-	float: left;	
-	width:970px;
-}
-#contentCenter {
-	float: left;
-	width:970px;	
-}
-#container {
-	width:2910px;
-}
-
-article.container {
-	margin-bottom: 25px;
-}
+@import "mediaQueries";
