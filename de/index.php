@@ -5,12 +5,12 @@
 <div id="debug">
 	<pre>
 		<?php print_r($_REQUEST); ?>
+		<?php print_r($_SERVER); ?>		
 	</pre>
 </div>
-
 <div id="wrapper">
 <div id="container">	
-	<div id="contentLeft" class="active">
+	<div id="contentLeft" class="active">	
 		<section id="jumbotronWork" class="jumbotron">
 			<div class="container">
 				<?php include("../admin/data/blocks/de/jumbotron_work.html"); ?>
@@ -55,8 +55,7 @@
 		</section>
 		<?php include("../php/inc.footer.php") ;?>	
 	</div><?php //contentLeft ?>
-
-	<div id="contentCenter">
+		<div id="contentCenter">
 			<section id="forYou">
 			<section id="forYouJobs">
 				<article class="container"></article>
@@ -76,24 +75,13 @@
 		</section>
 		<?php include("../php/inc.footer.php") ;?>
 		
-		
-		
-		
 	</div><?php //contentCenter ?>
-
 	<div id="contentRight">	
 		<section id="jumbotronWe" class="jumbotron">
 			<div class="container">
 				<?php include("../admin/data/blocks/de/jumbotron_we.html"); ?>
 			</div>
 		</section>
-		<!--
-		<section id="start" class="container">
-			<?php include("../admin/data/blocks/de/start.html"); ?>
-		</section>
-		-->
-		<!--<div class="divider"></div>-->
-	
 		<section id="we">
 			<section id="weProfile">
 				<article class="container"></article>			
@@ -124,7 +112,23 @@
 	<?php include("../php/inc.scripts.php");?>
 	<script type="text/javascript" src="<?php echo SERVER ?>/js/jquery.nivo.slider.js"></script>
 	<script type="text/javascript" src="<?php echo SERVER ?>/js/jquery.scrollTo.js"></script>
-	<script type="text/javascript" src="<?php echo SERVER ?>/js/heckhaus.js"></script>
+	<?php
+	if ($iOS == true) {
+		echo '<script type="text/javascript" src="';
+		echo SERVER;
+		echo '/js/heckhaus-iOS.js"></script>';
+	} elseif($ie == true) {
+		echo '<script type="text/javascript" src="';
+		echo SERVER;
+		echo '/js/heckhaus-IE.js"></script>';		
+	} else {
+		echo '<script type="text/javascript" src="';
+		echo SERVER;
+		echo '/js/heckhaus.js"></script>';				
+	}
+	?>
+	
+	<?php /*
 	<script type="text/javascript">	
 		
 		$(window).load(function() {
@@ -139,6 +143,6 @@
 			event.preventDefault();
 			container.scrollTo( id, 2000, {queue:true} );
 		});
-	</script>
+	</script> */ ?>
 </body>
 </html>
