@@ -61,6 +61,16 @@
 							</div>
 						</div>
 						
+						<div class="well spamProtection">
+							<h4>Spam-Schutz:</h4>
+							Bitte wählen Sie das Heckhaus Logo!
+							<br>
+							<input type="radio" name="spamProtect" id="item1" value="12"><label for="item1"><img src="<?php echo SERVER; ?>/images/forYou/partner/reebok.gif"></label>
+							<input type="radio" name="spamProtect" id="item2" value="8"><label for="item2"><img src="<?php echo SERVER; ?>/images/forYou/partner/bencore.gif"></label>
+							<input type="radio" name="spamProtect" id="item3" value="92"><label for="item3"><img src="<?php echo SERVER; ?>/images/forYou/partner/logo.png"></label>
+							<input type="radio" name="spamProtect" id="item4" value="73"><label for="item4"><img src="<?php echo SERVER; ?>/images/forYou/partner/holzrausch.gif"></label>																			
+						</div>
+						
 						<input type="hidden" name="language" value="<?php echo LANGUAGE;?>">
 						<span class="btn btn-danger pull-right submitNewsletter" style="margin-right:15px;padding:3px">
 							Subscribe
@@ -74,7 +84,7 @@
                      website development by <a href="http://siegerth.com" class="red" target="_blank">Kevin Siegerth</a><br>
                      website content copy by <a href="http://www.buerobotz.de/index.html" class="red" target="_blank">Robert Botz</a>			
 			<hr>
-			Copyright © <?php echo date("Y");?> Heckhaus | <a class="red" href="/<?php echo $lang;?>/impressum.php">Impressum</a> | <a class="red" href="/<?php echo $lang;?>/agb.php">AGB</a>
+			Copyright © <?php echo date("Y");?> Heckhaus | <a class="red" href="/<?php echo $lang;?>/impressum">Impressum</a> | <a class="red" href="/<?php echo $lang;?>/agb">AGB</a>
 	Referenzen: Ladenbau | Shop-in-Shop | Displays & Aufsteller | Graphics & Visuals | Messedesign & Messeplanung | Set Design | Showroom Design | Schaufenster-Inszenierung
 		</div>
 		<div class="col-md-3 footerRight">
@@ -90,3 +100,13 @@
 			</address>
 		</div>
 </footer>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-40094735-1', 'heckhaus.de');
+  ga('send', 'pageview');
+
+</script>

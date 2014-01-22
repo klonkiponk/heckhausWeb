@@ -77,7 +77,7 @@ $(document).ready(function() {
 	\********************************/
 	
 	//FUNCTION DISABLES THE HYPERLINKS AND INSTEAD SCROLLS TO THE DESIRED SECTION ON THE PAGE
-	$(document).on("click",".navbar-fixed-top a",function(event){
+	$(document).on("click",".navbar-fixed-top .navbar-nav a",function(event){
 		//var width = $(window).width();
 		//var halfWidth = width / 2;
 		var container = $("#wrapper");
@@ -150,26 +150,26 @@ $(document).ready(function() {
 	//Javascript is working from relational folder structure, therefore no /de or /en is used
 
 
-	$("#weContact article").load("we/contact.php article");
-	$("#wePress article").load("we/press.php article");
-	$("#weProfile article").load("we/profile.php article");
-	$("#weTeam article").load("we/team.php article");
+	//$("#weContact article").load("we/contact/index.php article");
+	$("#wePress article").load("we/press/index.php article");
+	$("#weProfile article").load("we/profile/index.php article");
+	$("#weTeam article").load("we/team/index.php article");
+	
+	$("#workHome article").load("work/home/index.php article");
+	$("#workBestOf article").load("work/bestOf/index.php article");
+	$("#workSetDesign article").load("work/setDesign/index.php article");
+	$("#workLadenbau article").load("work/ladenbau/index.php article");
+	$("#workRetail article").load("work/retail/index.php article");
+	$("#workDisplay article").load("work/display/index.php article");
+	$("#workGraphics article").load("work/graphics/index.php article");
+	$("#workShowroom article").load("work/showroom/index.php article");
+	$("#workEvents article").load("work/events/index.php article");
+	$("#workSetDesign article").load("work/setDesign/index.php article");
 
-	$("#workHome article").load("work/home.php article");
-	$("#workBestOf article").load("work/bestOf.php article");
-	$("#workSetDesign article").load("work/setDesign.php article");
-	$("#workLadenbau article").load("work/ladenbau.php article");
-	$("#workRetail article").load("work/retail.php article");
-	$("#workDisplay article").load("work/display.php article");
-	$("#workGraphics article").load("work/graphics.php article");
-	$("#workShowroom article").load("work/showroom.php article");
-	$("#workEvents article").load("work/events.php article");
-	$("#workSetDesign article").load("work/setDesign.php article");
-
-	$("#forYouJobs article").load("forYou/jobs.php article");
-	$("#forYouReferences article").load("forYou/references.php article");
-	$("#forYouPartner article").load("forYou/partner.php article");
-	$("#forYouDownloads article").load("forYou/downloads.php article",function(){
+	$("#forYouJobs article").load("forYou/jobs/index.php article");
+	$("#forYouReferences article").load("forYou/references/index.php article");
+	$("#forYouPartner article").load("forYou/partner/index.php article");
+	$("#forYouDownloads article").load("forYou/downloads/index.php article",function(){
 //		alert("last one loaded");
 	});
 
@@ -204,6 +204,11 @@ $(document).ready(function() {
 			}
 		});
 	});
+	
+	$(document).on("click",".spamProtection img",function(){
+		$(".spamProtection img").removeClass("activeImg");
+		$(this).addClass("activeImg");
+	});
 		
 	$('#slider1').tinycarousel({
 		axis: 'y',
@@ -222,7 +227,7 @@ $(document).ready(function() {
 	* Europa Slider
 	*
 	*/
-	$("#weArt article").load("we/art.php article",function(){
+	$("#weArt article").load("we/art/index.php article",function(){
 		$("#europaSlider").nivoSlider({
 			effect:"fade",
 			controlNav:false,

@@ -5,11 +5,12 @@ html {
 #wrapper {
 	overflow-x: hidden;
 	overflow-y: scroll;
-	position:fixed;
+	position:absolute;
 	top:120px;
 //	margin-top:120px;
 	padding-bottom:10px;
 //	border:2px solid orange;
+	-webkit-overflow-scrolling: touch;	
 }
 #contentLeft {
 	float: left;
