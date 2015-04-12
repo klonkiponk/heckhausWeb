@@ -1,5 +1,12 @@
-<?php include("../../../etc/config.php");?>
-<?php $lang = "en"; ?>
+<?php
+	include("../../../etc/config.php");
+	include("../../../php/inc.db.php");
+	include("../../../php/helpers.php");
+	include("../../../php/db/selectFromDB.php");
+	$lang = "en";
+	$category = "work";
+	$subCategory = "bestOf";
+?>
 <?php include("../../../php/inc.head.php");?>
 <body>
 <?php include("../../../php/inc.header.subSites.php");?>
@@ -7,7 +14,13 @@
 <div class="container">
 
 <article>
-	<?php include("../../../admin/data/blocks/en/work_bestof.html"); ?>	
+	<header class="page-header">
+	<h1>Arbeit &gt; <small>best of</small></h1>
+	</header>
+	<?php
+		echo displayArticles($lang,$category,$subCategory);
+	?>
+	<?php //include("../../../admin/data/blocks/en/work_bestof.html"); ?>	
 </article>
 	<?php include("../../../php/inc.footer.php") ;?>
 </div>

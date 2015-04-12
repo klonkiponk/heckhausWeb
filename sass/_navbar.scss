@@ -11,13 +11,14 @@ body {
 	border:2px solid orange;
 }
 
-
-.navbar {
-	
+#headerHeartLink {
+	text-transform: none;
+}
+.navbar {	
 	.languageSwitcher {
 		color:$heckhausgray;	
 		padding-top: 19px;
-		display: block;		
+		display: inline-block;		
 	}
 	font-family:"DIN";
 	//background:orange;
@@ -31,6 +32,15 @@ body {
 		width:200px;
 		height:23px;
 	}
+	img.callToAction{
+		height:60px;
+		width:60px;
+		display:inline-block;
+		float: none;
+		margin:0;
+		margin-left: 250px;		
+	}
+	
 	a {
 		text-transform: uppercase;
 	}
@@ -71,30 +81,4 @@ body {
 			}
 		}
 	}
-}
-
-@media (max-width: 320px) {
-	.navbar-nav {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-	.navbar-header {
-		display:block;
-		float:none !important;
-		margin:0 auto !important;
-		margin-left: 50px !important;
-	}
-	.navbar {
-		min-height:0;
-		margin-bottom: 0;
-		.container {
-			padding-top: 0;
-			padding-left: 0;
-			padding-right: 0;
-			background: #fff;
-		}
-	}
-	body {
-		padding-top: 80px; //70 px for the standard height of a fixed navbar in bootstrap + 45 cause of the extra padding
-	}	
 }

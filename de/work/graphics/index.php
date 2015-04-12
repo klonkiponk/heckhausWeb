@@ -1,5 +1,12 @@
-<?php include("../../../etc/config.php");?>
-<?php $lang = "de"; ?>
+<?php
+	include("../../../etc/config.php");
+	include("../../../php/inc.db.php");
+	include("../../../php/helpers.php");
+	include("../../../php/db/selectFromDB.php");
+	$lang = "de";
+	$category = "work";
+	$subCategory = "graphics";
+?>
 <?php include("../../../php/inc.head.php");?>
 <body>
 <?php include("../../../php/inc.header.subSites.php");?>
@@ -7,7 +14,12 @@
 <div class="container">
 
 <article>
-	<?php include("../../../admin/data/blocks/de/work_graphics.html"); ?>
+	<header class="page-header">
+	<h1>Work &gt; <small>GRAPHICS & WINDOW DRESSING</small></h1>
+	</header>
+	<?php
+		echo displayArticles($lang,$category,$subCategory);
+	?>	
 </article>
 	<?php include("../../../php/inc.footer.php") ;?>
 </div>

@@ -1,5 +1,12 @@
-<?php include("../../../etc/config.php");?>
-<?php $lang = "en"; ?>
+<?php
+	include("../../../etc/config.php");
+	include("../../../php/inc.db.php");
+	include("../../../php/helpers.php");
+	include("../../../php/db/selectFromDB.php");
+	$lang = "en";
+	$category = "we";
+	$subCategory = "art";
+?>
 <?php include("../../../php/inc.head.php");?>
 <body>
 <?php include("../../../php/inc.header.subSites.php");?>
@@ -7,13 +14,13 @@
 <div class="container">
 
 <article>
-	<?php include("../../../admin/data/blocks/en/we_art.html"); ?>	
+	<?php
+		echo displayArticles($lang,$category,$subCategory);
+	?>
 </article>
 	<?php include("../../../php/inc.footer.php") ;?>
 </div>
-</div>
 <?php include("../../../php/inc.scripts.php");?>
-<script type="text/javascript" src="<?php echo SERVER ?>/js/jquery.nivo.slider.js"></script>
-<script type="text/javascript" src="<?php echo SERVER ?>/js/heckhaus.subSite.js"></script>
+<script type="text/javascript" src="../../../js/heckhaus.subSite.js"></script>
 </body>
 </html>

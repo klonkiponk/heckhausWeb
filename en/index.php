@@ -1,9 +1,15 @@
-<?php include("../etc/config.php");?>
+<?php
+	include("../etc/config.php");
+	include("../php/inc.db.php");
+	include("../php/helpers.php");
+	include("../php/db/selectFromDB.php");
+?>
 <?php $lang = "en";
 	$altlang = "de";
 ?>
 <?php include("../php/inc.head.php");?>
 <body>
+<?php include("../php/inc.modalen.php");?>
 <?php include("../php/inc.headerEn.php");?>
 <div id="debug">
 	<pre>
@@ -14,11 +20,12 @@
 <div id="wrapper">
 <div id="container">	
 	<div id="contentLeft" class="active">	
-		<section id="jumbotronWork" class="jumbotron">
+		<?php echo displayJumbotron($lang,"Work"); ?>
+<!--		<section id="jumbotronWork" class="jumbotron">
 			<div class="container">
 				<?php include("../admin/data/blocks/en/jumbotron_work.html"); ?>
 			</div>
-		</section>
+		</section>-->
 		<section id="work">
 			<section id="workHome">
 				<article class="container"></article>			
@@ -32,13 +39,17 @@
 				<article class="container"></article>			
 			</section>
 			<div class="divider"></div>
-			<section id="workGraphics">
+			<section id="workRetail">
 				<article class="container"></article>			
 			</section>
 			<div class="divider"></div>
 			<section id="workShowroom">
 				<article class="container"></article>			
-			</section>					
+			</section>
+			<div class="divider"></div>
+			<section id="workGraphics">
+				<article class="container"></article>			
+			</section>
 			<div class="divider"></div>
 			<section id="workDisplay">
 				<article class="container"></article>			
@@ -47,10 +58,6 @@
 			<section id="workEvents">
 				<article class="container"></article>			
 			</section>
-			<div class="divider"></div>
-			<section id="workRetail">
-				<article class="container"></article>			
-			</section>		
 			<div class="divider"></div>
 			<section id="workSetDesign">
 				<article class="container"></article>			
@@ -80,11 +87,12 @@
 		
 	</div><?php //contentCenter ?>
 	<div id="contentRight">	
-		<section id="jumbotronWe" class="jumbotron">
+				<?php echo displayJumbotron($lang,"We"); ?>	
+<!--		<section id="jumbotronWe" class="jumbotron">
 			<div class="container">
 				<?php include("../admin/data/blocks/en/jumbotron_we.html"); ?>
 			</div>
-		</section>
+		</section>-->
 		<section id="we">
 			<section id="weProfile">
 				<article class="container"></article>			
@@ -115,22 +123,7 @@
 	<?php include("../php/inc.scripts.php");?>
 	<script type="text/javascript" src="<?php echo SERVER ?>/js/jquery.nivo.slider.js"></script>
 	<script type="text/javascript" src="<?php echo SERVER ?>/js/jquery.scrollTo.js"></script>
-	<?php
-	if ($iOS == true) {
-		echo '<script type="text/javascript" src="';
-		echo SERVER;
-		echo '/js/heckhaus-iOS.js"></script>';
-	} elseif($ie == true) {
-		echo '<script type="text/javascript" src="';
-		echo SERVER;
-		echo '/js/heckhaus.js"></script>';		
-	} else {
-		echo '<script type="text/javascript" src="';
-		echo SERVER;
-		echo '/js/heckhaus.js"></script>';				
-	}
-	?>
-	
+	<script type="text/javascript" src="<?php echo SERVER ?>/js/heckhaus.js"></script>	
 	<script type="text/javascript">	
 		
 		$(window).load(function() {

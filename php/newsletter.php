@@ -1,5 +1,4 @@
 <?php
-	
 	if($_POST['spamProtect'] != 92){
 		echo "Sie haben leider nicht das richtige Logo gewählt!";
 	} else {

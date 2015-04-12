@@ -14,4 +14,29 @@ $heckhausred:red;
 @import "debug";
 @import "layout";
 @import "tinySlider";
+@import "landingPages";
+@import "contactForm";
+@import "videoModal";
+@import "home";
+@import "animate";
 @import "mediaQueries";
+
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+	margin-right: 0;
+}
+.modal-backdrop {background-color: red;}
+
+.modal-backdrop, .modal-backdrop.fade.in {
+    opacity: 0.75;
+}
+.modal {
+
+}
+#modalLink {
+	cursor:pointer;
+}
+.callToAction {
+	cursor:pointer;
+	display: block;
+	margin:0 auto;
+}

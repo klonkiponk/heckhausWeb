@@ -1,0 +1,219 @@
+#myModal,#newsletterModal {
+	margin-top: 55px;
+}
+
+#newsletterForm {
+	font-family: "BLUE";
+	background:fuchsia;
+	background:url("/img/bg_contactForm.jpg");
+	background-size:contain;
+	min-height:400px;
+	padding:20px;
+	width:535px;
+	margin:0 auto;
+	.contactFormError {
+		background:rgba(255,0,0,0.5) !important;
+	}
+	.noPaddingLeftRight {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	h1 {
+		font-family: "BLUE";	
+		color:$heckhausred;
+		font-weight: bold;
+		margin-bottom:20px;
+	}
+	span.heading {
+		font-family: "BLUE";	
+		color:$heckhausred;
+		font-weight: bold;
+		margin-bottom:20px;
+		display: block;
+		font-size: 36px;
+		margin-top: 20px;		
+	}
+	
+	.request {
+		color:$heckhausred;
+		display: block;
+		font-weight: bold;				
+	}
+	.textLabelWrapper {
+		background:url("/img/bg_contactForm_label.jpg") no-repeat bottom;
+		background-size: contain;
+		display:block;		
+		margin-bottom: 0;	
+		input {
+			border:none;
+			background: transparent;
+			display: inline-block;
+			width:70%;
+			@include box-shadow(none);			
+			&:focus {
+				@include box-shadow(none);
+			}
+		}	
+	}
+	label.textLabel {
+		color:$heckhausred;
+	}
+	label.radioLabel {
+		height:22px;
+		color:$heckhausred;		
+		padding-left:30px;
+		padding-top: 2px;	
+		display:inline-block;
+		background:url("/img/bg_contactForm_radio.png") no-repeat;
+		background-size: contain;
+	}
+	.heart {
+		background:url("/img/bg_contactForm_heart.png") no-repeat;
+		background-size:contain;
+		height:335px;
+		//height:495px;
+		textarea {
+			background: transparent;
+			border:none;
+			width:100%;
+			height:100px;
+			overflow: scroll;
+			line-height: 23px;
+			@include box-shadow(none);
+			resize: none;			
+			&:focus {
+				@include box-shadow(none);				
+			}
+		}
+		&.heartEN {
+			background:url("/img/bg_contactForm_heart_EN.png") no-repeat;
+			background-size:contain;					
+		}
+	}
+	.bird {
+		background:url("/img/bg_contactForm_bird.png") no-repeat;
+		background-size:contain;
+		height:245px;		
+	}
+	.spacer {
+		height:143px;
+	}
+	.smallSpacer {
+		height:30px;
+	}
+	.checkedRadioButton {
+		background:url("/img/bg_contactForm_radioChecked.png") no-repeat !important;
+		background-size: contain !important;		
+	}
+	.btn {
+		padding:2px 5px;
+	}
+	.noShow {
+		display:none;
+	}
+}
+#contactForm {
+	//font-family: "BLUE";
+	font:17px;
+	width:600px;
+	margin:0 auto;	
+	background:#fff;
+	background-image: none;
+	padding:5px;
+	min-height:200px;		
+	#contactFormForm {
+		border: 2px solid red;
+		padding:10px 20px 10px 20px;
+		.textLabelWrapper {
+			display:block;		
+			margin-bottom: 10px;
+			border-bottom: 1px solid $heckhausred;
+			input {
+				border:none;
+				background: transparent;
+				display: inline-block;
+				width:70%;
+				@include box-shadow(none);			
+				&:focus {
+					@include box-shadow(none);
+				}
+			}	
+		}	
+		label {
+			margin-bottom: 0;
+			font-weight: normal;
+			color:$heckhausred;
+		}
+		.submitButtonWrapper {
+			background:#fff;
+			padding-left:8px;
+			position: absolute;
+			bottom:-29px;
+			right:0;			
+		}		
+		#submitContactForm {
+			border-radius: 0;
+			background:$heckhausred;
+			color:#fff;
+			text-transform: uppercase;
+			margin-right: 0;
+			padding:5px 8px;
+			font-size:145%;
+			border:none;
+			span {
+				padding:0;
+				margin:0;
+				display:block;
+				margin-bottom: -5px;
+			}
+		}
+		.address {
+			font-size: 90%;
+			color:$heckhausred;
+			h4 {
+				font-weight: bold;
+				margin-top: 14px;
+				margin-bottom: 0;
+			}
+		}
+		span.heading {
+			font-family: "BLUE";	
+			color:$heckhausred;
+			margin-bottom:20px;
+			display: block;
+			font-size: 38px;
+			padding-top: 0;
+			margin-top: 0;
+		}		
+		.noShow {
+			display:none;
+		}	
+		textarea {
+			background:url("/img/bg_contactForm_textarea.png") repeat;
+			border:none;
+			width:100%;
+			height:145px;
+			overflow: scroll;
+			line-height: 30px;
+			@include box-shadow(none);
+			resize: none;	
+			padding: 0;	
+			margin-bottom: 30px;	
+			&:focus {
+				@include box-shadow(none);				
+			}
+		}
+		.textareaWrapper {
+			position: relative;
+		}			
+	}
+}
+#newsletterForm {
+	.heading {
+		margin-top: 0;
+	}
+}
+.callToNewsletter {
+	cursor: pointer;
+	color:red;
+}

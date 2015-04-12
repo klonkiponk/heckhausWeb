@@ -1,15 +1,28 @@
-<?php include("../../../etc/config.php");?>
-<?php $lang = "de"; ?>
+<?php
+	include("../../../etc/config.php");
+	include("../../../php/inc.db.php");
+	include("../../../php/helpers.php");
+	include("../../../php/db/selectFromDB.php");
+	$lang = "de";
+	$category = "we";
+	$subCategory = "press";
+?>
 <?php include("../../../php/inc.head.php");?>
 <body>
 <?php include("../../../php/inc.header.subSites.php");?>
 <div id="wrapper">	
 <div class="container">
+
 <article>
-	<?php include("../../../admin/data/blocks/de/we_press.html"); ?>	
+	<header class="page-header">
+	<h1>We &gt; <small>Presse</small></h1>
+	</header>
+	<?php
+		echo displayArticles($lang,$category,$subCategory);
+	?>
+	<?php //include("../../../admin/data/blocks/de/we_press.html"); ?>	
 </article>
 	<?php include("../../../php/inc.footer.php") ;?>
-</div>
 </div>
 <?php include("../../../php/inc.scripts.php");?>
 <script type="text/javascript" src="../../../js/heckhaus.subSite.js"></script>

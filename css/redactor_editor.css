@@ -3,13 +3,17 @@
 @font-face {
   font-family: "DIN";
   src: url("../fonts/DINWeb.eot"); }
-
 @font-face {
   font-family: "DIN";
   src: url("../fonts/DINWeb.woff") format("woff"); }
-
+@font-face {
+  font-family: "BLUE";
+  src: url("../fonts/bluehigh-webfont.eot"); }
+@font-face {
+  font-family: "BLUE";
+  src: url("../fonts/bluehigh-webfont.woff") format("woff"); }
 html, body {
-  font-family: "DIN"; }
+  font-family: "DIN",sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "DIN";
@@ -18,12 +22,15 @@ h1, h2, h3, h4, h5, h6 {
 .page-header {
   border-bottom: none;
   margin-bottom: 0; }
-.page-header h1 {
-  color: #999999;
-  font-size: 16px; }
-.page-header small {
-  color: red;
-  font-size: 16px; }
+  .page-header h1 {
+    color: #999;
+    font-size: 16px; }
+  .page-header small {
+    color: red;
+    font-size: 16px; }
+
+#weArt .page-header h1 {
+  text-transform: none; }
 
 h4 {
   display: inline-block;
@@ -48,6 +55,13 @@ ul {
 p {
   margin: 10px 0; }
 
+#workHome hr {
+  display: none; }
+#workHome .toggled {
+  display: block; }
+#workHome .toggler {
+  display: none; }
+
 .toggled {
   display: none; }
 
@@ -56,25 +70,27 @@ p {
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase; }
-.toggler .more, .newsletterToggler .more {
-  font-size: 80%; }
-.toggler .more:after, .newsletterToggler .more:after {
-  content: "more"; }
-.toggler .less, .newsletterToggler .less {
-  font-size: 80%; }
-.toggler .less:after, .newsletterToggler .less:after {
-  content: "less"; }
+  .toggler .more, .newsletterToggler .more {
+    font-size: 80%; }
+    .toggler .more:after, .newsletterToggler .more:after {
+      content: "more"; }
+  .toggler .less, .newsletterToggler .less {
+    font-size: 80%; }
+    .toggler .less:after, .newsletterToggler .less:after {
+      content: "less"; }
 
 article.container {
   margin-bottom: 25px; }
+
+.medImg img.thumb {
+  width: 455px !important; }
 
 .medTxt h2 {
   font-size: 18px;
   margin-top: 0; }
 
 .smallItem img {
-  width: 213px !important;
-  height: 136px !important; }
+  width: 213px !important; }
 .smallItem h2 {
   margin-top: 7px; }
 
@@ -94,7 +110,7 @@ hr {
   font-size: 16px;
   font-weight: 600; }
 .col-md-3 h3 {
-  color: #999999;
+  color: #999;
   margin-top: 0;
   padding-top: 0;
   font-size: 14px; }
@@ -108,18 +124,17 @@ div.caption h2 {
   text-align: justify; }
 #weTeam h3 {
   font-size: 18px; }
-#weTeam h3 small {
-  font-size: 18px; }
+  #weTeam h3 small {
+    font-size: 18px; }
 
 a {
   color: #333; }
-a:hover {
-  color: red;
-  text-decoration: none; }
+  a:hover {
+    color: red;
+    text-decoration: none; }
 
 iframe {
-  display: block;
-  margin: 25px auto; }
+  display: block; }
 
 #caption1, #caption2, #caption3, #caption4, #caption5, #caption6, #caption6, #caption7, #caption8 {
   display: none; }
@@ -148,11 +163,11 @@ div.job {
   margin-bottom: 30px; }
 #weProfile ul {
   list-style: none; }
-#weProfile ul li {
-  background: red;
-  color: #fff;
-  margin-bottom: 7px;
-  padding: 3px; }
+  #weProfile ul li {
+    background: red;
+    color: #fff;
+    margin-bottom: 7px;
+    padding: 3px; }
 
 #newsletter form {
   margin: 0 auto;
@@ -162,20 +177,20 @@ div.job {
   position: relative;
   margin-left: 15px;
   margin-right: 15px; }
-#newsletter .well input[type=radio] {
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0; }
-#newsletter .well img {
-  width: 193px;
-  height: 100px;
-  opacity: 0.7; }
-#newsletter .well img.activeImg {
-  border: 1px solid red;
-  opacity: 1; }
-#newsletter .well h3 {
-  margin-top: 0; }
+  #newsletter .well input[type=radio] {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0; }
+  #newsletter .well img {
+    width: 193px;
+    height: 100px;
+    opacity: 0.7; }
+    #newsletter .well img.activeImg {
+      border: 1px solid red;
+      opacity: 1; }
+  #newsletter .well h3 {
+    margin-top: 0; }
 #newsletter .input-group {
   margin-bottom: 4px; }
 #newsletter .input-group-addon {
@@ -188,8 +203,8 @@ div.job {
 #newsletter .form-control:focus {
   border-color: red;
   outline: 0;
-  -webkit-box-shadow: none;
   -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none; }
 
 #forYouReferences a:hover {
@@ -205,21 +220,21 @@ div.job {
 
 footer {
   padding-top: 25px; }
-footer .footerLeft {
-  padding-left: 0; }
-footer .footerLeft .btn {
-  padding: 1px 3px 0px 3px;
-  background-color: red;
-  border-color: red; }
-footer .footerRight {
-  padding-right: 0; }
-footer .footerRight address {
-  font-size: 13px; }
-footer .footerRight address h3 {
-  margin-top: 0;
-  color: red;
-  font-size: 18px;
-  margin-bottom: 0; }
+  footer .footerLeft {
+    padding-left: 0; }
+    footer .footerLeft .btn {
+      padding: 1px 3px 0px 3px;
+      background-color: red;
+      border-color: red; }
+  footer .footerRight {
+    padding-right: 0; }
+    footer .footerRight address {
+      font-size: 13px; }
+      footer .footerRight address h3 {
+        margin-top: 0;
+        color: red;
+        font-size: 18px;
+        margin-bottom: 0; }
 
 @media (min-width: 1200px) {
   .container {

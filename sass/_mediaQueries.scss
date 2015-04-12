@@ -16,10 +16,14 @@
 			width: 720px;		
 		}
 	}
+	.navbar img.callToAction {
+		display:none;
+	}
+	
 }
 @media (min-width: 768px) and (max-width: 991px){
   .col-md-3 {
-    width: 50%;
+    width: 25%;
     float:left;
     min-height:250px;
   }
@@ -31,6 +35,9 @@
 	  width:25%;
 	  float:left;
   }
+  .smallItem img {
+	  //height: 110px !important;
+  }
 }
 @media (max-width: 768px) {
 	  .col-md-8 {
@@ -38,41 +45,30 @@
 		  float:left;
 	  }
 	  .col-md-4 {
-		  width:25%;
+		  width:33%;
 		  float:left;
 	  }
 	  .col-md-3 {
-	    width: 50%;
+	    width: 25%;
 	    float:left;
 	    min-height:250px;
 	    
 	  }
-	  .row .col-md-3:nth-child(2n) {
-		  padding-left: 62px;
-	  }
 	  iframe {
 		  max-width:557px;
 	  }
-	.tinySlider .viewport {
-		max-width: 720px;
-		height: 140px;
-	}
-	.tinySlider .overview li{
-		height: auto;
-		max-width: 720px;
-		img {
-			height: auto;
-			max-width: 100%;		
-		}
-	} 
+	 
 	.navbar-fixed-top {
 		.container {
-			padding-top:0 !important;
+			//padding-top:0 !important;
 		}
 	}
 	.navbar a.languageSwitcher {
 		display:none;
-	}	
+	}
+  .smallItem img {
+	  //height: 110px !important;
+  }		
 }
 @media (max-width: 320px) {
   img {
@@ -97,7 +93,7 @@
 	  margin-top: 25px;	  
   }
   .tinySlider .viewport {
-	  max-width: 720px;
+	  max-width: 320px;
 	  height: 140px;
    }
 	.navbar-fixed-top {
@@ -108,4 +104,29 @@
 	.navbar .languageSwitcher {
 		display:none;
 	}
+}
+@media (max-width: 320px) {
+	.navbar-nav {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.navbar-header {
+		display:block;
+		float:none !important;
+		margin:0 auto !important;
+		margin-left: 50px !important;
+	}
+	.navbar {
+		min-height:0;
+		margin-bottom: 0;
+		.container {
+			padding-top: 0;
+			padding-left: 0;
+			padding-right: 0;
+			background: #fff;
+		}
+	}
+	body {
+		padding-top: 80px; //70 px for the standard height of a fixed navbar in bootstrap + 45 cause of the extra padding
+	}	
 }

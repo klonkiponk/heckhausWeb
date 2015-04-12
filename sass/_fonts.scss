@@ -6,6 +6,14 @@
 	font-family: "DIN";
 	src: url("../fonts/DINWeb.woff") format("woff");
 }
+@font-face {
+	font-family: "BLUE";
+	src: url("../fonts/bluehigh-webfont.eot");
+}
+@font-face {
+	font-family: "BLUE";
+	src: url("../fonts/bluehigh-webfont.woff") format("woff");
+}
 html,body {
-	font-family: "DIN";
+	font-family: "DIN",sans-serif;
 }

@@ -77,7 +77,7 @@ $(document).ready(function() {
 	\********************************/
 	
 	//FUNCTION DISABLES THE HYPERLINKS AND INSTEAD SCROLLS TO THE DESIRED SECTION ON THE PAGE
-	$(document).on("click",".navbar-fixed-top .navbar-nav a",function(event){
+	$(document).on("click",".jsNavigation .navbar-nav a",function(event){
 		//var width = $(window).width();
 		//var halfWidth = width / 2;
 		var container = $("#wrapper");
@@ -139,6 +139,13 @@ $(document).ready(function() {
 		event.preventDefault();
 		container.scrollTo( id, 2000, {queue:true} );
 	});
+	
+	$(document).on("click","#contactLinkDe",function(event){
+		window.location.href="http://heckhaus.de/de/impressum/";
+	});
+	$(document).on("click","#contactLinkEn",function(event){
+		window.location.href="http://heckhaus.de/en/impressum/";
+	});	
 
 	/********************************\
 	
@@ -172,14 +179,11 @@ $(document).ready(function() {
 	$("#forYouDownloads article").load("forYou/downloads/index.php article",function(){
 //		alert("last one loaded");
 	});
-
-
 	/********************************\
 	
 	SLIDERS
 	
 	\********************************/
-
 	$("#heckhausSlider").nivoSlider({
 		effect:"slideInLeft",
 		slices:15,
@@ -193,35 +197,62 @@ $(document).ready(function() {
 		pauseOnHover:true,
 		manualAdvance:false
 	});
-	
-	$(document).on("click",".submitNewsletter",function(){
-		$.ajax({
-			type: 'post',
-			url:"../php/newsletter.php",
-			data: $(this).parent().serialize(),
-			success:function(result){
-				$("#newsletter form").html(result);
-			}
-		});
-	});
-	
-	$(document).on("click",".spamProtection img",function(){
-		$(".spamProtection img").removeClass("activeImg");
-		$(this).addClass("activeImg");
-	});
-		
-	$('#slider1').tinycarousel({
+	$('#sliderWork').tinycarousel({
 		axis: 'y',
 		interval: true,
 		intervaltime: 3000
 	});
-	$('#slider2').tinycarousel({
+	$('#sliderWe').tinycarousel({
 		axis: 'y',
 		interval: true,
 		intervaltime: 3000
 	});
+	/********************************\
 	
+	FORMS
 	
+	\********************************/
+	$(document).on("click","#submitContactForm",function(){
+		if($('#contactFormEmail').val() === ""){
+			$('#contactFormEmail').parent().addClass('animated pulse');
+			$("#contactFormEmail").focus();			
+			setTimeout(function(){
+				$('#contactFormEmail').parent().removeClass('animated pulse');				
+			}, 1000);			
+		} else {
+			$.ajax({
+				type: 'post',
+				url:"/php/submitContactForm.php",
+				data: $("#contactFormForm").serialize(),
+				success:function(result){
+					$("#contactForm").html(result);
+					$("#contactForm button").focus();
+					setTimeout(function(){
+						$('#myModal').modal('hide');
+						$("#contactForm").load("/php/inc.modalde.php #contactFormForm");						
+					}, 5000);
+
+				}
+			});
+		}
+	});
+	
+	$(document).on("click",".callToAction",function(){
+		$("#contactFormName").focus();
+
+	});
+	/*SAY HELLO BUTTON*/
+	$(document).on("click","img.callToAction",function(){
+			//$("#sendToMail").val("contact@heckhaus.de");
+			$("#sendToMail").val("kevin.siegerth@icloud.com");			
+	});
+	/*WE-KONTAKT-FELD*/
+	$(document).on("click","a.callToAction",function(){
+			//$("#sendToMail").val("info@heckhaus.de");
+			$("#sendToMail").val("kevin.siegerth@icloud.com");
+	});
+	
+
 	/********************************\
 	*
 	* Europa Slider
@@ -236,4 +267,8 @@ $(document).ready(function() {
 			pauseTime:2000
 		});
 	});
+	
+	$(document).on("click",".radioLabel",function(){
+		$(this).toggleClass("checkedRadioButton");
+	});	
 });
